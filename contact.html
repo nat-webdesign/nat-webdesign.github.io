@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Cassiopeia - Contact</title>
+</head>
+
+<body>
+  <header>
+      <h2><a href="index.html">Cassiopeia</a></h2>
+      <p>Enjoy your vacations!</p>
+      <nav>
+          <ul>
+              <li><a href="rooms.html">Rooms</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="contact.html">Info</a></li>
+          </ul>
+      </nav>
+  </header>
+
+  <main>
+    <h1>Contact</h1>
+    <article>
+      <h2>Address</h2>
+      <p>...</p>
+    </article>
+    <h1> Αποστολή Δεδομένων </h1>
+    <form action="/sendData" method="GET">
+      <Label for="txtFirstName">Όνομα: </Label>
+      <input type="text" id="txtFirstName" name="FirstName" minlength="3" maxlength="30">
+      <br>
+      <Label for="txtLastName">Επώνυμο: </Label>
+      <input type="text" id="txtLastName" name="LastName" minlength="3" maxlength="30">
+      <br>
+      <input type="submit" value="Αποστολή">
+      <input type="reset" value="Καθαρισμός">
+    </form>
+
+    <br><br>
+    <h1> Login </h1>
+    <form action="/sendData" method="POST">
+      <label for="txtUsername">Username:</label>
+      <input type="text" id="txtUsername" name="username" maxlength="30" placeholder="Enter your username.." autocomplete="on" required>
+      <br>
+      <label for="txtPassword">Password: </label>
+      <input type="password" id="txtPassword" name="password" maxlength="30" placeholder="Enter your password.." autocomplete="on" pattern="[0-9a-zA-Z]{4,10}" required>
+      <br>
+      <input type="submit" value="submit">
+      <input type="reset" value="reset">
+    </form>
+
+
+    <br><br>
+    <h1> Άλλες Φόρμες</h1>
+    <form action="/sendData" method="POST" enctype ="multipart/form-data">
+      <label for="txtNum">1 έως 10 (ακέραιος):</label>
+      <input type="number" id="txtNum" name="num1" min="1" max="10" required>
+      <br>
+      <label for="txtNum2">0 έως 10 (ακέραιος β.2):</label>
+      <input type="number" id="txtNum2" name="num2" value="0" min="0" max="10" step="2">
+      <br>
+      <label for="txtNum3">0 έως 10 (πραγματικός β.0,5):</label>
+      <input type="number" id="txtNum3" name="num3" value="0" min="0" max="10" step="0.5">
+      <br>
+      <label for="txtNum4">Μη αρνητικός, πραγματικός:</label>
+      <input type="number" id="txtNum4" name="num4" value="0" min="0" step="any">
+      <br>
+      <label for="sldNum">Ακέραιος (0-10):</label>
+      <input type="range" id="sldNum" name="num5" value="0" min="0" max="10">
+      <br>
+      <label for="txtUrl">Εισάγετε το url: </label>
+      <input type="url" id="txtUrl" name="url" placeholder="https://example.com" pattern="https://.*">
+      <br>
+      <label for="txtSearch">Αναζήτηση: </label>
+      <input type="search" id="txtSearch" name="search_term">
+      <br>
+      <label for="fc">Επιλογή Αρχείου: </label>
+      <input type="file" id="fc" name="file">
+      <br>
+      <label for="cl">Επιλογή Χρώματος: </label>
+      <input type="color" id="cl" name="color">
+      <br>
+      <input type="hidden" name="hidden" value="someValue">
+      <br>
+      <input type="submit" value="Αποστολή">
+      <input type="reset" value="Καθαρισμός">
+    </form>
+
+    <br>
+    <h1> Επιλογή: </h1>
+    <form action="/sendData" method="GET">
+      <input type="checkbox" id="chkMailList" name="mailList" value="mail-on" checked>
+      <label for="chkMailList">Join Mailing List</label>
+      <br>
+      <input type="checkbox" id="chkOpt1" name="chkOpt1" value="opt1-on" >
+      <label for="chkOpt1">Opt1</label>
+      <br>
+      <input type="checkbox" id="chkOpt2" name="chkOpt2" value="opt2-on">
+      <label for="chkOpt2">Opt2</label>
+      <br>
+      <input type="checkbox" id="chkAccept" name="chkAccept" value="Accept-on" indeterminate>
+      <label for="chkAccept">Accept Everything</label>
+      <br>
+      <input type="submit" value="Αποστολή">
+      <input type="reset" value="Καθαρισμός">
+    </form>
+
+    <br><br>
+
+    <h1> Επιλογή: </h1>
+  <form action="/sendData" method="GET">
+    Επιλέξτε δώρο:
+    <br>
+    <input type="radio" id="rdKoutali" name="gift" value="koutali" checked>
+    <label for="rdKoutali">Γλυκό κουταλιού</label>
+    <br>
+    <input type="radio" id="rdMilfeulle" name="gift" value="milfeulle">
+    <label for="rdMilfeulle">Μιλφείγ</label>
+    <br>
+    Τρόπος Χρώσης:
+    <br>
+    <input type="radio" id="rdVISA" name="payment" value="visa">
+    <label for="rdVISA">VISA</label>
+    <br>
+    <input type="radio" id="rdCash" name="payment" value="cash">
+    <label for="rdCash">Μετρητά</label>
+    <br>
+    <input type="radio" id="rdPist" name="payment" value="credit">
+    <label for="rdPist">Πίστωση </label>
+    <br>
+    <input type="submit" value="Αποστολή">
+    <input type="reset" value="Καθαρισμός">
+  </form>
+
+
+  <h1> Επιλογή: </h1>
+  <form action="/sendData" method="GET">
+    <label for="slDest"> Προορισμός Διακοπών:</label>
+    <select id="slDest" name="destination" multiple size="4">
+      <optgroup label="Europe">
+        <option value="Spain" selected>Spain</option>
+        <option value="Italy">Italy</option>
+        <option value="Greece">Greece</option>
+      </optgroup>
+      <optgroup label="Africa">
+        <option value="Zimbabwe" selected>Zimbabwe</option>
+        <option value="Madagascar">Madagascar</option>
+      </optgroup>
+    </select>
+    <br>
+    <input type="submit" value="Αποστολή">
+    <input type="reset" value="Καθαρισμός">
+  </form>
+
+  <h1> Επιλογή: </h1>
+  <form action="/sendData" method="GET">
+    <fieldset>
+      <legend>
+        Επιλέξτε δώρο:
+      </legend>
+      <input type="radio" id="rdKoutali" name="gift" value="koutali" checked>
+      <label for="rdKoutali">Γλυκό κουταλιού</label>
+      <br>
+      <input type="radio" id="rdMilfeulle" name="gift" value="milfeulle">
+      <label for="rdMilfeulle">Μιλφείγ</label>
+    </fieldset>
+    
+    
+    <br><br>
+    
+    
+    <fieldset>
+      <legend>
+        Τρόπος Χρέωσης:
+      </legend>
+      <input type="radio" id="rdVISA" name="payment" value="visa">
+      <label for="rdVISA">VISA</label>
+      <br>
+      <input type="radio" id="rdCash" name="payment" value="cash">
+      <label for="rdCash">Μετρητά</label>
+      <br>
+      <input type="radio" id="rdPist" name="payment" value="credit">
+      <label for="rdPist">Πίστωση </label>
+      <br>
+    </fieldset>
+
+   <!--Παλιό πρότυπο
+    <form action="/sendData" method="GET">
+      Name: <input type="text" name="firstName" minlength="3" maxlength="30"><br>
+      Lastname: <input type="text" name="lastName" minlength="3" maxlength="30"><br>
+      <input type="submit" value="Send">
+      <input type="reset" value="Reset">
+    </form>-->
+
+
+  </main>
+
+  <aside>
+      <h2>Prices</h2>
+      <p>Giveaway 1</p>
+      <p>10 nights 1 free</p>
+  </aside>
+
+  <footer>
+    <p>&copy; Cassiopeia 2024</p>
+  </footer>
+</body>
+
+</html>
